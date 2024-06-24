@@ -23,7 +23,7 @@ const Home = () => {
     <div className="container flex">
       <div className="facebook-page flex">
         <div className="text">
-          <h1><Link to='/users'>facebook</Link></h1>
+          <h1><Link to='/users' style="text-decoration: none">facebook</Link></h1>
           <p>Connect with friends and the world </p>
           <p> around you on Facebook.</p>
         </div>
