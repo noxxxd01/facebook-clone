@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios'
 import './Home.css'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ const Home = () => {
     <div className="container flex">
       <div className="facebook-page flex">
         <div className="text">
-          <h1>facebook</h1>
+          <h1><Link to='/users'>facebook</Link></h1>
           <p>Connect with friends and the world </p>
           <p> around you on Facebook.</p>
         </div>
