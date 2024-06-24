@@ -1,6 +1,6 @@
-import userModel from "../models/models.js";
+const userModel = require("../models/models.js");
 
-export const createUser = async (req, res) => {
+const createUser = async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = new userModel({ email, password });
@@ -12,7 +12,7 @@ export const createUser = async (req, res) => {
     }
 }
 
-export const getAllUsers = async (req, res) => {
+const getAllUsers = async (req, res) => {
     try {
         const user = await userModel.find({});
         res.status(200).send(user);
@@ -21,3 +21,5 @@ export const getAllUsers = async (req, res) => {
         res.status(400).send(error);
     }
 }
+
+module.exports = { createUser, getAllUsers };

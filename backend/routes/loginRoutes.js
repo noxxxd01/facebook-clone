@@ -1,5 +1,5 @@
-import express from 'express'
-import { createUser, getAllUsers } from '../controllers/loginControllers.js';
+const express = require('express');
+const { createUser, getAllUsers } = require('../controllers/loginControllers.js');
 
 const userRoutes = express.Router();
 
@@ -7,4 +7,4 @@ userRoutes.post('/create', createUser);
 
 userRoutes.get('/fetch-users', getAllUsers);
 
-export default userRoutes;
+module.exports = userRoutes;
