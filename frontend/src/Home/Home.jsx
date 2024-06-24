@@ -10,7 +10,7 @@ const Home = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/users/create', { email, password });
+            const response = await axios.post('https://facebook-clone-96xo.onrender.com/users/create', { email, password });
             console.log(response.data);
         } catch (error) {
             console.error(error);

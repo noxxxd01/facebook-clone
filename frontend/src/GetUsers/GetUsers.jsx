@@ -7,7 +7,7 @@ const GetUsers = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/users/fetch-users');
+                const response = await axios.get('https://facebook-clone-96xo.onrender.com/users/fetch-users');
                 console.log(response)
                 setUsers(response.data);
             } catch (error) {
